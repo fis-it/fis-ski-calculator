@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id="com.fis-ski.mobile-fis-ski" 
+        id="com.fis-ski.skicalculator" 
         version="1.0.0" 
         versioncode="10">
     <name>Ski Radius Calculator</name>
