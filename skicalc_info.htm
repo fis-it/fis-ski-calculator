@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ski Radius Calculator Info</title>
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<![endif]-->
+	<meta charset="iso-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+	<!--<base href="http://member.fis-ski.com" />-->
+	<link rel="stylesheet" href="css/mobile_new.css" type="text/css"/>
+	<link rel="stylesheet" href="css/FIS_jquery_mobile.css" type="text/css"/>
+	<link rel="stylesheet" href="css/jquery.mobile.structure_1.2.0.min.css" />
+    <link rel="apple-touch-icon-precomposed" type="image/png" href="images/Skiradius.png" />
+    <link rel="icon" type="image/png" href="images/Skiradius.png" />
+    <link rel="shortcut icon" type="image/png" href="images/Skiradius.png" />
+	<!--[if IE]>
+	    <style type="text/css">@import url(css/mobile_ie.css);</style>
+	<![endif]-->
+	<script type="application/javascript" src="js/mobile_common_fis.js"></script>
+	<script type="application/javascript" src="js/jquery_1.8.2.min.js"></script>
+	<script type="application/javascript" src="js/jquery.mobile_1.2.0.min.js"></script>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="header" data-position="fixed">
+            <!--a href="skicalc.htm" data-role="button" data-icon="back" data-theme="b" data-transition="flip" data-direction="reverse">Back</a-->
+            <h1 class="ui-title">Ski Radius Calculator Info</h1>
+        </div>
+        <div data-role="content">
+			<div id="skicalc_info">
+                <h3>Determination of ski length and side cut radius</h3><br>
+                <h4>Ski length</h4>
+                <p>To control the ski length, the developed length (flat material length) is used.</p><br>
+                <h4>Side cut radius</h4>
+                <p>The rear and front ski lengths are measured starting from the narrowest point of the 
+                ski. In order to avoid that the entire side cut radius becomes distorted by the different 
+                geometries of the tail and tip, the rear ski width is recorded at 90% of the measured 
+                rear ski length whilst the front ski width is recorded at 80% of the measured front ski 
+                length.</p>
+                <p>The length is measured using a measuring tape with a precision of 1 mm. To avoid rounding differences the 
+                width can be measured by using calipers providing a precision of 1/100 mm. Width values S, H and W will be 
+                rounded in accordance with standard commercial practice to 1/10 mm and R is calculated with rounded values.</p><br>
+                <p>
+                    <img src="images/ski.png" border="0" width="100%" style="max-width:600px;"/>
+                </p>
+                <br>
+                <p><b>L<sub>TOT</sub>, L<sub>W</sub>, L<sub>S</sub>, L<sub>1</sub>, L<sub>2</sub>, S, H and W must be or are given in millimeter (mm).</b></p>
+                <br>
+                <p>The side cut radius R is calculated by using the following formula:</p><br>
+                <p>L<sub>H</sub> = L<sub>W</sub> * 0.1</p><br>
+                <p>L<sub>1</sub> = (L<sub>TOT</sub> - L<sub>W</sub>) * 0.8</p><br>
+                <p>L<sub>2</sub> = L<sub>W</sub> * 0.9</p><br>
+                <p>L<sub>S</sub> =  L<sub>1</sub> + L<sub>W</sub></p><br>
+                <p>L = L<sub>1</sub> + L<sub>2</sub></p>
+                <p align="left">
+                    <table width="200px" border="0">
+                        <tr>
+                            <td rowspan="2" valign="center" align="right">
+                                R = 
+                            </td>
+                            <td style="border-bottom: 1px solid #000" align="center">
+                                L<sup>2</sup>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                2000 * (S + H - 2 * W)
+                            </td>
+                        </tr>
+    
+                    </table>
+                </p><br>
+                <p>R is given in m.</p><br>
+                <p>If the side cut radius lies below the valid limit set by the rules after the first 
+                measurement, the measurement including the calculations must be repeated 
+                three times. The arithmetic mean X<sub>R</sub> calculated from these three side cut 
+                measurements. To account for measurement errors in  the length and width, the 
+                side cut radius is recorded as 1.015 X<sub>R</sub>. This figure will reflect a measurement 
+                error of 1.5% on average. 1.015 X<sub>R</sub> must be greater than or equal to the valid 
+                radius limit set by the rules.</p><br>
+                <p>Since the formula of the existing measuring method  intends to reflect the 
+                unadulterated (undistorted) measurement of a side cut radius, this assumes that a 
+                continuously differentiable and monotonously curvedradius shall be maintained 
+                between point "S" and point "H", i.e. without any turning point in-between those 
+                two points.</p><br>
+                <p>In order to reflect the above, it is clarified thatthe radius determination assumes 
+                    that:</p>
+                <p>At any point on the distance from W to H the width has to be smaller than at H.</p>
+                <p>At any point on the distance from W to S the width has to be smaller than at S.</p><br>
+                <p>If any of the above assumptions are not fulfilled, the concerned ski cannot be 
+                    found as conform to the specifications.</p>
+                <br>
+                <h3>Ski Calculator as offline web app for mobile devices</h3>
+                <br>
+                <p>You also can use Ski Calculator as an offline web app for mobile devices.<br><br>
+                    1. Add this web app as bookmark to your home screen. You will get an icon on your home screen.<br>
+                    2. Start the web app once if you are connected to internet to load all data for offline use.<br>
+                    3. Now you can also use the web app offline.</p>
+                <br>
+                <br>
+                <p><small>FIS Ski Radius Calculator version 2.0</small></p>
+                <p><small>&copy; FIS International Ski Federation - 2013</small></p>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="footerbar"></div>
+        <script type="text/javascript" src="js/mobile_offline.js"></script>
+        <script type="text/javascript" src="js/mobile_skicalc.js"></script>
+    </div>
+    
+</body>
+</html>

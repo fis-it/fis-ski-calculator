@@ -6,13 +6,16 @@
     margin: 0;
     padding: 0;
 }
+html,body{
+    height: 100%; 
+}
 img {
 	border:0;
 	}
 
 /* Title */
 #fis-home {
-	background-image: url(http://www.fis-ski.com/static/mobile/css/images/FIS_white_home.png);
+	background-image: url(./images/FIS_white_home.png);
 	background-size: 36px;
 	top: 2px;
 	position:absolute;
@@ -22,9 +25,9 @@ img {
 	width: 36px;
 	}
 .ui-header h1.ui-title{
-	margin-left: 40px;
+	margin-left: 85px;
 	margin-top: 0.6em;
-	margin-right: 40px;
+	margin-right: 85px;
 	margin-bottom: 0.8em;
 	}
 .ui-header h1.ui-title.live{
@@ -33,15 +36,27 @@ img {
 	margin-right: 95px;
 	margin-bottom: 0.8em;
 	}
+#header .scroller{
+	margin-top: 0.6em;
+	margin-bottom: 0.8em;
+}
+#title2{
+	float:left;
+	margin-left: 40px;
+	margin-top: 0.6em;
+	margin-right: 0px;
+	margin-bottom: 0.8em;
+}
 .footer{
 	position:absolute;
 	bottom:0px;
-	width: 100%;
+	width: 99.9%;
 	text-align:center;
 	display:block;
 	font-size:12px;
 	font-weight:bold;
-	padding:2px;
+	padding-top:2px;
+    padding-bottom:2px;
 	border: 1px solid      		#B3B3B3      /*{a-bar-border}*/;
 	background:     #00388C     /*{a-bar-background-color}*/;
 	color:     #ffffff     /*{a-bar-color}*/;
@@ -58,7 +73,6 @@ img {
 .footer.ui-footer{
 	position:absolute;
 	}
-
 .filter{
 	margin-bottom: 0px;
 	margin-left: 10px;
@@ -105,26 +119,12 @@ img {
 	text-align:center;
 	font-size:10px;
 	font-weight:bold;
+    height: 14px;
 	}
 
 input.text {
     font: 14px;
     }
-/*input.button {
-    font: 14px Helvetica,Arial Geneva, Swiss, SunSans-Regular; 
-    border: 2px outset #294194; 
-    background-color:#294194;
-    color:#FFFFFF; 
-    padding:0 0 0 0;
-}	*/
-.scroller {
-	font-weight:bold;
-	text-shadow: rgba(0,0,0,0.3) 0px 1px 2px;
-	padding-bottom: 4px;
-	margin-top:-4px;
-	}
-
-
 .eventplace{
 	font-size:12px;
 	text-overflow: ellipsis;
@@ -221,6 +221,9 @@ tr.i1{
 tr.lastfinish{
 	background-color:#fde696;
 }
+tr.favnat{
+	background-color:#97DDFF;
+}
 td.name{
 	text-align:left;
 	text-overflow: ellipsis;
@@ -268,6 +271,24 @@ td.rankraces {
 td.teamname {
 	font-weight: bold;
 	}
+.medalrank{
+    text-align: right; 
+    }
+.medalresult{
+    text-align: center;  
+    }
+.medalnation{
+    padding-left: 10px;
+    }
+.medalnationshort{
+    display: block;
+    }
+.medalnationlong{
+    display: none;
+    }
+.medalflag{
+    text-align: right;
+    }
 .resultscontent {
     margin-left:0px;
 	margin-right:0px;
@@ -285,16 +306,30 @@ td.teamname {
   	}
 #extracontainer {
 	margin-top: -5px;
-	width: 100%;
+	margin-bottom: 10px;
+	width: 50%;
 	text-align:center;
+	float:right;
 	}
 #extracontainer label{
 	font-size: 12px;
 	margin-left: 10px;
 	text-align: left;
 	}
+#statisticcontent{
+    margin: 10px 3px;
+    }
+#statisticdiagram{
+    -moz-box-shadow: 0px 1px       4px       /*{global-box-shadow-size}*/     rgba(0,0,0,0.3)     /*{global-box-shadow-color}*/;
+    -webkit-box-shadow: 0px 1px       4px       /*{global-box-shadow-size}*/     rgba(0,0,0,0.3)     /*{global-box-shadow-color}*/;
+	box-shadow: 0px 1px       4px       /*{global-box-shadow-size}*/     rgba(0,0,0,0.3)     /*{global-box-shadow-color}*/;
+    }
+.highcharts-title{
+        font-size: 12px !important;
+        font-weight: bold;
+    }
 
-@media screen and (min-width: 500px) {  
+@media screen and (min-width: 500px) {
 	.resultscontent {
 		margin-left:10px;
 		margin-right:10px;
@@ -365,6 +400,22 @@ td.teamname {
 	td.points_team {
 		width:50px;
 	}
+    .medalnationlong{
+        display: block;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        white-space:nowrap;
+    }
+    .medalnationshort{
+        display: none;
+    }
+    #statisticcontent{
+        margin: 10px 10px;
+    }
+    .highcharts-title{
+        font-size: 16px !important;
+        font-weight:normal;
+    }
 }
 
 
@@ -382,13 +433,13 @@ td.teamname {
 .biog-choice {
 	text-align:center;
 	margin-bottom: 3px;
-	margin-top: -5px;
+	margin-top: 0px;
+    margin-left: auto;
+    margin-right:auto;
+    width: 100%;
 	}
 .simg {
 	height: 80px;
-	}
-li.live_menu {
-	font-size:12px;
 	}
 .live_menu_divider {
 	visibility:hidden;
@@ -400,11 +451,310 @@ li.live_menu {
 	max-height:100px;
 	max-width: 100px;
 	}
+.news p.ui-li-desc {
+	overflow:visible
+
+	}
+#hide{
+		display:none;
+	}
+.prevnext a.calendar span.ui-btn-inner {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size:14px;
+	}
+li.newsarticle p.ui-li-desc, li.newsarticle h2, li.newsarticle h4 {
+	white-space:normal;
+	margin:0;
+
+	}
+@media screen and (min-width: 500px) {
+	.biog .ui-li {
+		font-size:14px;
+	}
+	.biog_name {
+		font-size:16px;
+		margin-top:40px;
+	}
+}
+/*iPhone*/
+@media screen and (max-width:500px) {
+    li.live_menu a.livelink, li.live_menu {
+        font-size:12px;
+	}   
+}
+/*iPhone*/
+@media screen and (min-width:500px) and (max-width:760px)    {
+    li.live_menu a.livelink, li.live_menu{
+        font-size:12px;
+	} 
+}
+/*iPhone*/
+@media screen and (max-width:760px){
+	#hide{
+		display:block;
+		line-height:0;
+	}
+	.prevnext a.calendar span.ui-btn-inner {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size:10px;
+	}
+
+
+
+}
+/*iPad and bigger */
+@media screen and (min-width:761px) and (max-width:900px)   
+{
+    #hide{
+		display:none;
+	}
+	.prevnext a.calendar span.ui-btn-inner {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size:14px;
+	}
+
+}
+/*iPad Portrait*/
+@media screen and (min-width:761px) and (max-width:900px) and (orientation:portrait)
+{
+}
+
+/*=====================================Live Results=========================================*/
+#navselect .ui-btn-corner-all {
+	border-radius:0px;
+	}
+#navselect .ui-shadow{
+	box-shadow:0px 0px 0px rgba(0,0,0,0);
+	-moz-box-shadow:0px 0px 0px rgba(0,0,0,0);
+	-webkit-box-shadow:0px 0px 0px rgba(0,0,0,0);
+	-o-box-shadow:0px 0px 0px rgba(0,0,0,0);
+	-ms-box-shadow:0px 0px 0px rgba(0,0,0,0);
+	}
+.scroller {
+	font-weight:bold;
+	text-shadow: rgba(0,0,0,0.3) 0px 1px 2px;
+	padding-bottom: 4px;
+	margin-top:-4px;
+	width: 100%;
+	}	
+#resultwrapper{
+	/*background:rgb(204,204,0);*/
+    position: absolute;
+	top: 90px;
+    left: 10px;
+    right: 10px;
+    bottom: 30px;
+	}
+#result1, #result2, #result3, #result4{
+	float: left;
+	width: 49%;
+	height: 43%;
+	
+}
+#result1, #result2 {
+	margin-bottom: 45px;
+}
+#result1, #result3 {
+	float: left;
+}
+#result2, #result4 {
+	float: right;
+}
+
+#result6 {
+	float: right;
+	width: 49%;
+	height: 400px;
+	margin-bottom: 40px;
+}
+#result5 {
+	float: left;
+	width: 49%;
+	height: 400px;
+	margin-bottom: 40px;
+
+}
+#quarter, #semi, #final {
+	margin-top: 10px;
+        margin-bottom: 20px;
+        float: left;
+	width: 33.33%;
+
+}
+#quarter .result, #semi .result, #final .result{
+	font-size:14px;
+	margin-bottom: 10px;
+	}
+.quad
+{	
+	height:100%;
+	width:97%;
+	/*overflow-y:scroll*/
+	border-bottom:1px solid #808080;
+}
+
+#buttonbar{
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	height: 80px;
+	}
+#buttonrefresh{
+	width:50%;
+	float:left;
+	}
+	
+@media screen and (min-width: 500px) {
+	li.live_menu {
+		font-size:16px;
+	}
+	.live_menu_wrap {
+		float: left;
+	}
+	.live_menu_divider {
+		visibility:visible;
+		float: left;
+		line-height: 16px;
+	}
+	
+}
+/*iPhone*/
+@media screen and (max-width:500px) 
+{
+	#quarter .result, #semi .result, #final .result{
+	font-size:12px;
+	}
+	#extracontainer, #buttonrefresh {
+		width: 100%;
+		clear:both;
+	}
+	#resultwrapper {
+		position: relative;
+		top:10px;
+		left: 0px;
+    	right: 0px;
+	}
+
+}
+/*iPhone*/
+@media screen and (min-width:500px) and (max-width:760px)    
+{
+	#quarter .result, #semi .result, #final .result {
+		font-size:14px;
+		clear:left;
+	}
+	#resultwrapper {
+		position: relative;
+		top:10px;
+		left: 0px;
+    	right: 0px;
+	}
+	#title2 {
+		display:none;
+	}
+
+}
+/*iPhone*/
+@media screen and (max-width:760px)    
+{
+	#result1, #result6 {
+		width: 100%;
+		height:100%;
+		margin-bottom:50px;
+	}
+	#quarter, #semi, #final {
+		width:100%;
+		clear:left;
+		margin-bottom: 30px;
+		
+	}
+	
+	#result2, #result3, #result5, #result4 {
+		display:none;
+		
+	}
+	.quad {	
+		border-bottom:0px;
+		overflow: hidden;
+	}
+	#title2 {
+		display:none;
+	}
+
+
+}
+
+/*small screens*/
+@media screen and (min-height:769px) and (max-height:1024px) {
+	#result1, #result2, #result3, #result4 {
+		height: 43%;
+	}
+}
+@media screen and (min-height:630px) and (max-height:768px) {
+	#result1, #result2, #result3, #result4 {
+		height: 42%;
+	}
+}
+@media screen and (min-height:460px) and (max-height:629px) {
+	#result1, #result2, #result3, #result4 {
+		height: 38%;
+	}
+}
+@media screen and (max-height:459px) and (min-width:500px) {
+
+	#result2, #result3, #result5, #result4 {
+		display:none;	
+	}
+	#result1, #result6 {
+		width: 100%;
+		height:100%;
+		margin-bottom:50px;
+	}
+	.quad {	
+		overflow: hidden;
+	}
+	#resultwrapper {
+		position: relative;
+		top:10px;
+		left: 0px;
+    	right: 0px;
+	}
+}
+/*iPad and bigger */
+@media screen and (min-width:761px) and (max-width:900px)   
+{
+	#quarter .result, #semi .result, #final .result{
+		font-size:12px;
+	}
+}
+
+/*iPad Portrait*/
+@media screen and (min-width:761px) and (max-width:900px) and (orientation:portrait)
+{
+	#result6 {
+		float: right;
+		width: 50%;
+		height: 500px;
+	}
+	#result5 {
+		float: left;
+		width: 50%;
+		height: 500px;
+	}
+}
+/*=============================================END Live Results================================================*/
+
+/*=============================================Ski Radius Calculator===========================================*/
 .skicalclegend{
 	font-size: 8pt;
 	text-align: left;
 	padding-left:2px;
-	}
+        }
 input.skicalcdata.ui-input-text {
 	margin-top:1px;
 	}
@@ -458,90 +808,14 @@ input.skicalcdata.ui-input-text {
 	max-width: 600px;
 	margin:0 auto;
 	}
-
-#result1, #result3, #result2
-{
-	float: left;
-	width: 49%;
-	height: 235px;
-	margin-bottom: 40px;
-}
-#result1, #result3{
-	float: left;
-}
-#result2{
-	float: right;
-}
-#result4
-{
-	float: right;
-	width: 49%;
-	height: 400px;
-	margin-bottom: 40px;
-}
-#result5
-{
-	float: left;
-	width: 49%;
-	height: 400px;
-	margin-bottom: 40px;
-
-}
-#quarter, #semi, #final
-{
-	float: left;
-	width: 33.33%;
-
-}
-
-#quarter .result, #semi .result, #final .result{
-	font-size:14px;
-	margin-bottom: 10px;
-	}
-.quad
-{	
-	height:100%;
-	width:100%;
-	overflow-y:scroll;
-	border-bottom:1px solid #808080;
-}
-#hide{
-		display:none;
-	}
-.prevnext a.calendar span.ui-btn-inner {
-	padding-left: 10px;
-	padding-right: 10px;
-	font-size:14px;
-	}
-li.newsarticle p.ui-li-desc, li.newsarticle h2, li.newsarticle h4 {
-	white-space:normal;
-	margin:0;
-
-	}
-.news p.ui-li-desc {
-	overflow:visible
-
-	}
-	
+#skicalcbutton{
+        display:none;
+        }
+.footerbar{
+        height:35px;
+            
+        }
 @media screen and (min-width: 500px) {
-	.biog .ui-li {
-		font-size:14px;
-	}
-	.biog_name {
-		font-size:16px;
-		margin-top:40px;
-	}
-	li.live_menu {
-		font-size:16px;
-	}
-	.live_menu_wrap {
-	float: left;
-	}
-	.live_menu_divider {
-		visibility:visible;
-		float: left;
-		line-height: 16px;
-	}
 	.skicalclegend{
 		font-size: 10pt;
 	}
@@ -553,112 +827,368 @@ li.newsarticle p.ui-li-desc, li.newsarticle h2, li.newsarticle h4 {
 	}
 	
 }
-/*iPhone*/
-@media screen and (max-width:500px) 
-{
-	#quarter .result, #semi .result, #final .result{
-	font-size:12px;
+/*====================================== END Ski Radius Calculator====================================*/
+
+/*====================================== START new results====================================*/
+li.resultheader{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 2px;
+    padding-right:22px;
+}
+li.resultline a{
+    font-weight:normal ! important;
+    padding-top: 0.3em ! important;
+    padding-bottom: 0.3em ! important;
+}
+li.resultlineteam a{
+    font-weight: bold ! important;
+    padding-top: 0.3em ! important;
+    padding-bottom: 0.3em ! important;
+}
+li.favnat{
+    background: rgb(151,221,255);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(151,221,255,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(151,221,255,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(151,221,255,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(151,221,255,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(151,221,255,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(151,221,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#97ddff',GradientType=0 );
+}
+li.favnatteam{
+    background: rgb(151,221,255);
+    background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(151,221,255,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,224,224,1)), color-stop(100%,rgba(151,221,255,1)));
+    background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(151,221,255,1) 100%);
+    background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(151,221,255,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(151,221,255,1) 100%);
+    background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(151,221,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#97ddff',GradientType=0 );
+}
+li.lastfinish{
+    background: rgb(253,230,150);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(253,230,150,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(253,230,150,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(253,230,150,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(253,230,150,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(253,230,150,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(253,230,150,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fde696',GradientType=0 );
+}
+li.lastfinishteam{
+    background: rgb(253,230,150);
+    background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(250,230,150,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,224,224,1)), color-stop(100%,rgba(250,230,150,1)));
+    background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(250,230,150,1) 100%);
+    background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(250,230,150,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(250,230,150,1) 100%);
+    background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(250,230,150,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#fae696',GradientType=0 );
+}
+.name{
+	text-align:left;
+	text-overflow: ellipsis;
+	overflow:hidden;
 	}
-	.quad
-	{	
-		border-bottom:0px;
+.teamname {
+	font-weight: bold;
+	}    
+.bib, .position {
+	text-align:right;
+	padding-right:5px;
+	font-weight:bold;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(178,178,178,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(178,178,178,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(178,178,178,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(178,178,178,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(178,178,178,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(178,178,178,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b2b2b2',GradientType=0 );
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding-top: 0.3em;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20px;
+}
+.position{
+    background:#FCC300;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #fdecaf /*{b-bar-background-start}*/), to( #FCC300 /*{b-bar-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #fdecaf /*{b-bar-background-start}*/, #FCC300 /*{b-bar-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fdecaf /*{b-bar-background-start}*/, #FCC300 /*{b-bar-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fdecaf /*{b-bar-background-start}*/, #FCC300 /*{b-bar-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #fdecaf /*{b-bar-background-start}*/, #FCC300 /*{b-bar-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #fdecaf /*{b-bar-background-start}*/, #FCC300 /*{b-bar-background-end}*/);
+}
+li.irm{
+    text-align:left;
+    background: #00388C /*{b-bup-background-color}*/;
+	font-weight: bold;
+	color: #ffffff /*{b-bup-color}*/;
+	text-shadow: 0 /*{b-bup-shadow-x}*/ -1px /*{b-bup-shadow-y}*/ 0 /*{b-bup-shadow-radius}*/ #000 /*{b-bup-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #6db3f2 /*{b-bup-background-start}*/), to( #00388C /*{b-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #6db3f2 /*{b-bup-background-start}*/, #00388C /*{b-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #6db3f2 /*{b-bup-background-start}*/, #00388C /*{b-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #6db3f2 /*{b-bup-background-start}*/, #00388C /*{b-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #6db3f2 /*{b-bup-background-start}*/, #00388C /*{b-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #6db3f2 /*{b-bup-background-start}*/, #00388C /*{b-bup-background-end}*/);
+    padding-top: 0.3em ! important;
+    padding-bottom: 0.3em ! important;
+}
+.time {
+	text-align:right;
 	}
-	#skicalc{
-	margin-left: -12px;
-	margin-right: -12px;
-	margin-top: -10px;
-	margin-bottom: -20px;
-	
+.time_team {
+    width:60px;
+    }  
+.points,.points_total,.points_total_big,.cuppoints {
+	text-align:right;
+	}
+.cuppoints {
+	font-weight:bold;
+}	
+.points_team {
+	text-align:right;
+	font-weight:bold;
+	}
+.time_team {
+	text-align:right;
+	font-weight:bold;
+	}
+.livepoints {
+	text-align:right;
+	}
+.rankraces {
+	text-align:right;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow:hidden;
+    }
+.hidecolumn {
+    display: block;
+}     
+.width_block1, .ui-grid-a > *:nth-child(n) .width_block1{ 
+    width:50% !important;
+}
+.width_block2, .ui-grid-a > *:nth-child(n) .width_block2 { 
+    width:50% !important;
+}
+.width_Rank { 
+    width:10% !important;
+    margin-left: -2px;
+}
+.width_Bib { 
+    width:10% !important;
+    margin-left: -2px;
+}
+.width_Name { 
+    width:78% !important;
+}
+.width_Nation { 
+    width:12% !important;
+}
+.width_Time1 { 
+    width:100% !important;
+}
+.width_Time2,.width_Time21 { 
+    width:50% !important;
+}
+.width_Time3, .ui-grid-a > *:nth-child(n) .width_Time3{ 
+    width:33%;
+}
+.width_Time4, .ui-grid-a > *:nth-child(n) .width_Time4{ 
+    width:67%;
+}
+.width_Time5, .ui-grid-a > *:nth-child(n) .width_Time5{ 
+    width:25%;
+}
+
+@media screen and (min-width: 500px) {
+    li.resultheader{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 15px;
+        padding-right:45px;
 	}
 }
-/*iPhone*/
-@media screen and (min-width:500px) and (max-width:760px)    
-{
-	#quarter .result, #semi .result, #final .result{
-	font-size:14px;
-	clear:left;
+@media screen and (max-width: 500px) {
+    .name, .teamname{
+        margin-left: -8px ! important;
+        }
+    .position, .bib {
+        width: 17px;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 2px;
+        padding-right:5px;
+    }  
+    div.nameheader {
+        padding-left:7px;
 	}
-	.quad
-	{	
-		border-bottom:0px;
+    .resultline a, .resultlineteam a{
+        padding-right:22px !important;
+    }
+    .resultline .ui-icon, .resultlineteam .ui-icon{
+        right: 2px !important;
+    }
+    li.resultline a{
+        padding-top: 0.5em ! important;
+        padding-bottom: 0.5em ! important;
+    }
+    li.resultlineteam a{
+        padding-top: 0.5em ! important;
+        padding-bottom: 0.5em ! important;
 	}
+    .width_block1, .ui-grid-a > *:nth-child(n) .width_block1{ 
+        width:65% !important;
+    }
+    .width_block2, .ui-grid-a > *:nth-child(n) .width_block2 { 
+        width:35% !important;
+    }
+    .hidecolumn {
+        display: none;
+    }
+    .width_Time21 { 
+        width:100% !important;
+    }
 }
-/*iPhone*/
-@media screen and (max-width:760px)    
-{
-	#result1, #result4
-	{
-		width: 100%;
-		height:100%;
-		overflow:auto;
+@media screen and (max-width: 600px) {
+    .breakcolumn .ui-block-a,
+	.breakcolumn .ui-block-b {
+		width: 100%  !important;
+		float:none;
 	}
-	#quarter, #semi, #final 
-	{
-		width:100%;
-		clear:left;
-		margin-bottom: 30px;
-		
-	}
-	
-	#result2, #result3, #result5
-	{
-		display:none;
-		
-	}
-	.quad
-	{	
-		overflow: hidden;
-	}
-	#hide{
-		display:block;
-		line-height:0;
-	}
-	.prevnext a.calendar span.ui-btn-inner {
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size:10px;
-	}
-
-
-
+    .width_Time3, .ui-grid-a > *:nth-child(n) .width_Time3{ 
+        width:50%;
+    }
+    .width_Time4, .ui-grid-a > *:nth-child(n) .width_Time4{ 
+        width:50%;
+    }
 }
-/*iPad and bigger */
-@media screen and (min-width:761px) and (max-width:900px)   
-{
-	#quarter .result, #semi .result, #final .result{
-	font-size:12px;
-	}
-	#hide{
-		display:none;
-	}
-	.prevnext a.calendar span.ui-btn-inner {
-	padding-left: 10px;
-	padding-right: 10px;
-	font-size:14px;
-	}
-
+/*====================================== END new results====================================*/
+/*====================================== START navigation====================================*/
+.navigation a  {
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0.8em !important;
 }
-@media screen and (min-width:761px) and (max-width:900px) and (orientation:portrait)
-{
-	#result1, #result2, #result3
-	{
-		height: 335px;
-	}
-	#result4
-	{
-		float: right;
-		width: 50%;
-		height: 500px;
-	}
-	#result5
-	{
-		float: left;
-		width: 50%;
-		height: 500px;
-	
-	}
-	
-
+.navigation  {
+    padding: 0px ! important;  
 }
+#navrefresh {
+    position:absolute;
+    right: 0px;
+}
+.app {
+    display: none ! important;
+}
+@-webkit-keyframes fadeIn_nav {
+    from { opacity: 0; 
+			bottom:-50px;
+			}
+      to { opacity: 1; 
+	  	bottom: 0px;
+			}
+}
+
+@-moz-keyframes fadeIn_nav {
+    from { opacity: 0; 
+        bottom: -50px;
+			}
+      to { opacity: 1; 
+           bottom: 0px;
+			}
+}
+
+@-ms-keyframes fadeIn_nav {
+   from { opacity: 0; 
+			bottom:-50px;
+			}
+      to { opacity: 1; 
+	  	bottom: 0px;
+			}
+}
+@keyframes fadeIn_nav {
+	 from { opacity: 0;
+            bottom: -50px;
+			}
+      to { opacity: 1;
+           bottom: 0px;
+			}
+	}
+@-o-keyframes fadeIn_nav {
+	 from { opacity: 0; 
+			bottom:-50px;
+			}
+      to { opacity: 1; 
+	  	bottom: 0px;
+			}
+}
+@-webkit-keyframes fadeOut_nav {
+   from { opacity: 1; 
+			bottom: 0px;
+			}
+      to { opacity: 0; 
+	  	bottom:-50px;
+			}
+}
+
+@-moz-keyframes fadeOut_nav {
+    from {  opacity: 1;
+            bottom: 0px;
+			}
+      to { opacity: 0;
+           bottom: -50px;
+			}
+}
+
+@-ms-keyframes fadeOut_nav {
+    from { opacity: 1; 
+			bottom: 0px;
+			}
+      to { opacity: 0; 
+	  	bottom:-50px;
+			}
+}
+@keyframes fadeOut_nav {
+	 from { opacity: 1; 
+            bottom: 0px;
+			}
+      to { opacity: 0; 
+           bottom: -50px;
+			}
+	}
+@-o-keyframes fadeOut_nav {
+	  from { opacity: 1; 
+			bottom: 0px;
+			}
+      to { opacity: 0; 
+	  	bottom:-50px;
+			}
+}
+.shownav{
+    -webkit-animation: fadeIn_nav 0.5s;
+	-moz-animation: fadeIn_nav 0.5s;
+	-ms-animation: fadeIn_nav 0.5s;
+	animation: fadeIn_nav 0.5s;
+	-o-animation: fadeIn_nav 0.5s;
+	bottom:0px;
+    opacity: 1;
+    display: block;
+}
+.hidenav{
+    -webkit-animation: fadeOut_nav 0.5s;
+	-moz-animation: fadeOut_nav 0.5s;
+	-ms-animation: fadeOut_nav 0.5s;
+	animation: fadeOut_nav 0.5s;
+	-o-animation: fadeOut_nav 0.5s;
+	bottom:-50px;
+    opacity: 0;
+    display: none;
+}
+/*====================================== END navigation====================================*/

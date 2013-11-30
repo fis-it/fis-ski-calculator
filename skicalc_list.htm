@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ski Radius Calculator Info</title>
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<![endif]-->
+	<meta charset="iso-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!--<base href="/" />-->
+	<link rel="stylesheet" href="css/mobile_new.css" type="text/css"/>
+	<link rel="stylesheet" href="css/FIS_jquery_mobile.css" type="text/css"/>
+	<link rel="stylesheet" href="css/jquery.mobile.structure_1.2.0.min.css" />
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="images/Skiradius.png" />
+        <link rel="icon" type="image/png" href="images/Skiradius.png" />
+        <link rel="shortcut icon" type="image/png" href="images/Skiradius.png" />
+	<!--[if IE]>
+	    <style type="text/css">@import url(css/mobile_ie.css);</style>
+	<![endif]-->
+	<script type="application/javascript" src="js/mobile_common_fis.js"></script>
+	<script type="application/javascript" src="js/jquery_1.8.2.min.js"></script>
+	<script type="application/javascript" src="js/jquery.mobile_1.2.0.min.js"></script>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="header" data-position="fixed">
+            <h1 class="ui-title">Saved List</h1>
+        </div>
+        <div class="resultscontent" style="max-width:600px; margin:0 auto;">
+            <table id="skilist" class="result" width="100%" cellspacing="1" style="margin-top:10px;">
+                    <tr class="tableheadresult ui-li-divider ui-bar-a">
+                        <!--th rowspan="2" width="5%">ID</th-->
+                        <th rowspan="2" width="8%">BIB</th>
+                        <th width="11%">L<sub>TOT</sub></th>
+                        <th width="11%">L<sub>W</sub></th>
+                        <th width="11%">S</th>
+                        <th width="11%">W</th>
+                        <th width="11%">H</th>
+                        <th width="11%">R</th>
+                        <!--th rowspan="2" width="14%">saved on<br>date/time</th-->
+                     </tr>
+                     <tr class="tableheadresult ui-li-divider ui-bar-a">
+                        <th>L<sub>H</sub></th>
+                        <th>L<sub>S</sub></th>
+                        <th>L<sub>1</sub>-20%</th>
+                        <th>L<sub>2</sub>-10%</th>
+                        <th>L</th>
+                        <th>R<sub>T</sub></th>
+                    </tr>
+                </table>
+                <div id="skicalcbutton">
+                    <!--table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="padding-right:2px">
+                            	<div id="csvbutton"></div>
+                            </td>
+                            <td style="padding-left:2px">
+                           
+                        </tr>
+                    </table-->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="padding-right:2px">
+                            	<div id="emailbutton"></div>
+                            </td>
+                            <td style="padding-left:2px">
+                                <button data-theme="b" type="button" onClick="onDelete()" tabindex="24">Delete List</button>
+                            </td>
+                            
+                        </tr>
+                    </table>
+                </div>
+                <!--div id="status"></div-->
+            </div>
+            <div class="footerbar"></div>
+        </div>
+        <script type="text/javascript" src="js/mobile_offline.js"></script>
+        <script type="text/javascript" src="js/mobile_skicalc.js"></script>
+    </div>
+    
+</body>
+</html>

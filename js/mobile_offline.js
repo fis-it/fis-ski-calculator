@@ -9,7 +9,9 @@
 		var connectionStatus = ((navigator.onLine) ? 'online' : 'offline');
 		if (connectionStatus == 'offline'){
                     header_a.style.visibility = 'hidden';
-                    fis_logo.style.visibility = 'visible'
+                    if (typeof(fis_logo) != 'undefined' && fis_logo != null){    
+				fis_logo.style.visibility = 'visible';
+			}
                     var show_status = ""
                 }else{
                     var show_status = " (" + connectionStatus + ")"
