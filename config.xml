@@ -21,10 +21,10 @@
        <gap:splash src="splash/android/portrait/mdpi.png" gap:platform="android" gap:density="mdpi" />
        <gap:splash src="splash/android/portrait/hdpi.png" gap:platform="android" gap:density="hdpi" />
        <gap:splash src="splash/android/portrait/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-       <icon src="icons/android/fis_logo-36x36.png" gap:platform="android" gap:density="ldpi" />
-        <icon src="icons/android/fis_logo-48x48.png" gap:platform="android" gap:density="mdpi" />
-        <icon src="icons/android/fis_logo-72x72.png" gap:platform="android" gap:density="hdpi" />
-        <icon src="icons/android/fis_logo-96x96.png" gap:platform="android" gap:density="xhdpi" />
+       <icon src="images/Skiradius.png" gap:platform="android" gap:density="ldpi" />
+        <icon src="images/Skiradius.png" gap:platform="android" gap:density="mdpi" />
+        <icon src="images/Skiradius.png" gap:platform="android" gap:density="hdpi" />
+        <icon src="images/Skiradius.png" gap:platform="android" gap:density="xhdpi" />
        <!--<gap:splash src="splash/android/landscape/ldpi.png" gap:platform="android" gap:density="ldpi" />
        <gap:splash src="splash/android/landscape/mdpi.png" gap:platform="android" gap:density="mdpi" />
        <gap:splash src="splash/android/landscape/hdpi.png" gap:platform="android" gap:density="hdpi" />
