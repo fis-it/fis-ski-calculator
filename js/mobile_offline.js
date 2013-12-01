@@ -4,13 +4,13 @@
 	function loaded()
 	{
 		var h1Title = document.querySelector("h1 span");
-                var header_a = document.querySelector("div a");
-                var fis_logo = document.querySelector("div #fis-home");
+//                var header_a = document.querySelector("div a");
+//                var fis_logo = document.querySelector("div #fis-home");
 		var connectionStatus = ((navigator.onLine) ? 'online' : 'offline');
 		if (connectionStatus == 'offline'){
-                    header_a.style.visibility = 'hidden';
+//                    header_a.style.visibility = 'hidden';
                     if (typeof(fis_logo) != 'undefined' && fis_logo != null){    
-				fis_logo.style.visibility = 'visible';
+//				fis_logo.style.visibility = 'visible';
 			}
                     var show_status = ""
                 }else{
