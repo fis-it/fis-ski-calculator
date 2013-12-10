@@ -5,7 +5,7 @@
         version="1.0.0" 
         versioncode="10">
     <name>Ski Radius Calculator</name>
-    <Description>Help you to calculate the radius ski with the new FIS rules for season 2012/2013 </Description>
+    <Description>Help you to calculate the radius ski according FIS rules</Description>
     <author href="http://www.fis-ski.com">
         FIS IT department
     </author>
