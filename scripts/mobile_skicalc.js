@@ -83,7 +83,7 @@ function makeFooterbar(db){
         html = html + '<ul class="ui-grid-a">\n';
     }
     html = html + '<li class="ui-block-a">\n';
-    html = html + '<a class="ui-btn ui-btn-inline ui-btn-up-b" data-direction="reverse" data-transition="flip" data-theme="b" href="index.html" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-inline="true">\n';
+    html = html + '<a class="ui-btn ui-btn-inline ui-btn-up-b" data-direction="reverse" data-transition="flip" data-theme="b" href="skicalc.htm" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-inline="true">\n';
     html = html + '<span class="ui-btn-inner">\n';
     html = html + '<span class="ui-btn-text">Calculator</span>\n';
     html = html + '</span>\n';
@@ -698,29 +698,30 @@ function alert_autoclose(text,res){
         }
 	});
 }   
+
 function PreCalc(){
-	if (trim(document.getElementById('lengthTOT').value) != ""){
-		if (isNaN(document.getElementById('lengthTOT').value)=== false) {
-			LTOT = parseFloat(document.getElementById('lengthTOT').value);
+    if ($.trim($('#lengthTOT').val()) != ""){
+		if (isNaN($('#lengthTOT').val())=== false) {
+			LTOT = parseFloat($('#lengthTOT').val());
 		}else{
 			alert_value("Value for 'Ski total lenght' is not a number!","lengthTOT");
-			return;
+			return;		
 		}
 	}else if (checkvalue == 0){
-		alert_empty("Please enter a value for:<br>'Ski total lenght'!",'lengthTOT');
+		window.console && console.log("Please enter a value for:<br>'Ski total lenght'!",'lengthTOT');
         checkvalue = 1;
 		return;
 	}
-	if (trim(document.getElementById('lengthW').value) != ""){
-		if (isNaN(document.getElementById('lengthW').value)=== false) {
-			LW = parseFloat(document.getElementById('lengthW').value);
+	if ($.trim($('#lengthW').val()) != ""){
+		if (isNaN($('#lengthW').val())=== false) {
+			LW = parseFloat($('#lengthW').val());
 		}else{
 			alert_value("Value for 'Ski lenght rear' is not a number!","lengthW");
             checkvalue = 0;
 			return;
 		}
 	}else{
-		alert_empty("Please enter a value for:<br>'Ski lenght rear'!",'lengthW');
+		window.console && console.log("Please enter a value for:<br>'Ski lenght rear'!",'lengthW');
 		return;
 	}
 	if (LW > LTOT){
@@ -730,7 +731,7 @@ function PreCalc(){
 	
 	var LH = parseInt(LW * 0.1);
 	var L1 = parseInt((LTOT - LW) * 0.8);
-	var LS = parseInt(L1 + LW)
+	var LS = parseInt(L1 + LW);
 	var L2 = parseInt(LW * 0.9);
 	var L = parseInt(L1 + L2);
 	window.console && console.log("LH=" + LH);
@@ -739,11 +740,16 @@ function PreCalc(){
 	window.console && console.log("L2=" + L2);
 	window.console && console.log("L=" + L);
 
-	document.getElementById('lengthH').innerHTML = LH;
-	document.getElementById('lengthS').innerHTML = LS;
-	document.getElementById('length1').innerHTML = L1;
-	document.getElementById('length2').innerHTML = L2;
-	document.getElementById('length').innerHTML = L;
+	/* $('lengthH').innerHTML = LH;
+	$('lengthS').innerHTML = LS;
+	$('length1').innerHTML = L1;
+	$('length2').innerHTML = L2;
+	$('length').innerHTML = L; */
+        $('#lengthH').html(LH);
+	$('#lengthS').html(LS);
+	$('#length1').html(L1);
+	$('#length2').html(L2);
+        $('#length').html(L);
 	checkvalue = 0;
 	return;
 }
@@ -757,7 +763,7 @@ function CalculateSki(mode){
 			return;
 		}
 	}else{
-		alert_empty("Please enter a value for:<br>'Ski total lenght'!",'lengthTOT');
+		alert_value("Please enter a correct value for:<br>'Ski total lenght'!",'lengthTOT');
 		return;             
 	}
 	if (trim(document.getElementById('lengthW').value) != ""){
@@ -768,7 +774,7 @@ function CalculateSki(mode){
 			return;
 		}
 	}else{
-		alert_empty("Please enter a value for:<br>'Ski lenght rear'!",'lengthW')  
+		alert_value("Please enter a correct value for:<br>'Ski lenght rear'!",'lengthW')  
 		return;
 	}
 	if (LW > LTOT){
@@ -784,7 +790,7 @@ function CalculateSki(mode){
 			return;
 		}
 	}else{
-		alert_empty("Please enter a value for:<br>'Front ski width'!",'front') 
+		alert_value("Please enter a correct value for:<br>'Front ski width'!",'front') 
 		return;
 	}
 	if (trim(document.getElementById('middle').value) != ""){
@@ -796,7 +802,7 @@ function CalculateSki(mode){
 			return;
 		}
 	}else{
-		alert_empty("Please enter a value for:<br>'Middle ski width'!",'middle')  
+		alert_value("Please enter a correct value for:<br>'Middle ski width'!",'middle')  
 		return
 	}
 	if (trim(document.getElementById('rear').value) != ""){
@@ -808,7 +814,7 @@ function CalculateSki(mode){
 			return;
 		}
 	}else{
-		alert_empty("Please enter a value for:<br>'Rear ski width'!",'rear')  
+		alert_value("Please enter a correct value for:<br>'Rear ski width'!",'rear')  
 		return;
 	}
 	if (LW > LTOT){
@@ -830,6 +836,12 @@ function CalculateSki(mode){
 	var L2 = parseInt(LW * 0.9);
 	var L = parseInt(L1 + L2);
 	var R = (L * L)/(2000 * (parseFloat(R_round(S,1)) + parseFloat(R_round(H,1)) - 2 * parseFloat(R_round(W,1))));
+        
+        if(R == "Infinity")
+        {
+            alert_empty("Front, middle and rear widths cannot be equal",'front');
+            return;
+        }
         
 	window.console && console.log("S="+S + " SR="+R_round(S,1));
 	window.console && console.log("W="+W + " WR="+R_round(W,1));
