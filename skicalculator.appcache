@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# v20131223
+# v2014091
 
 # Offline cache v9
 # html files
@@ -8,51 +8,34 @@ skicalc_list.htm
 skicalc_info.htm
 
 # css files
-http://member.fis-ski.com/mobile/css/mobile_new.css
-http://member.fis-ski.com/mobile/css/FIS_jquery_mobile.css
-http://member.fis-ski.com/mobile/css/jquery.mobile.structure_1.3.2.min.css
-http://member.fis-ski.com/mobile/css/add2home.css 
+http://member.fis-ski.com/static/mobile/css/mobile_new.css
+http://member.fis-ski.com/static/mobile/css/FIS_jquery_mobile.css
+http://member.fis-ski.com/static/mobile/css/jquery.mobile.structure_1.2.0.min.css
+http://member.fis-ski.com/static/mobile/css/add2home.css 
 
 # js files
-http://member.fis-ski.com/mobile/scripts/jquery_1.9.1.min.js
-http://member.fis-ski.com/mobile/scripts/jquery.mobile_1.3.2.min.js
-http://member.fis-ski.com/mobile/scripts/mobile_common_fis.js
-http://member.fis-ski.com/mobile/scripts/mobile_offline.js
-http://member.fis-ski.com/mobile/scripts/mobile_skicalc.js
-http://member.fis-ski.com/mobile/scripts/add2home.js
+http://member.fis-ski.com/static/mobile/scripts/mobile_common_fis.js
+http://member.fis-ski.com/static/mobile/scripts/jquery_1.8.2.min.js
+http://member.fis-ski.com/static/mobile/scripts/jquery.mobile_1.2.0.min.js
+http://member.fis-ski.com/static/mobile/scripts/mobile_offline.js
+http://member.fis-ski.com/static/mobile/scripts/mobile_skicalc.js
+http://member.fis-ski.com/static/mobile/scripts/add2home.js
 
 # images
-http://member.fis-ski.com/mobile/css/images/ski.png
-http://member.fis-ski.com/mobile/css/images/Skiradius.png
-http://member.fis-ski.com/mobile/css/images/FIS_white.png
-http://member.fis-ski.com/mobile/css/images/FIS_white_36.png
-http://member.fis-ski.com/mobile/css/images/ajax-loader.gif
-http://member.fis-ski.com/mobile/css/images/FIS_white_home.png
-http://member.fis-ski.com/mobile/css/images/icons-18-black.png
-http://member.fis-ski.com/mobile/css/images/icons-36-black.png
-http://member.fis-ski.com/mobile/css/images/icons-18-white.png
-http://member.fis-ski.com/mobile/css/images/icons-36-white.png
-http://member.fis-ski.com/mobile/css/images/pdf_white.png
-http://member.fis-ski.com/mobile/css/images/empty.gif
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-57x57.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-114x114.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-72x72.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-144x144.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-60x60.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-120x120.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-76x76.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-152x152.png
-http://member.fis-ski.com/mobile/css/images/favicon-196x196.png
-http://member.fis-ski.com/mobile/css/images/favicon-160x160.png
-http://member.fis-ski.com/mobile/css/images/favicon-96x96.png
-http://member.fis-ski.com/mobile/css/images/favicon-32x32.png
-http://member.fis-ski.com/mobile/css/images/favicon-16x16.png
-http://member.fis-ski.com/mobile/css/images/mstile-144x144.png
-http://member.fis-ski.com/mobile/css/images/mstile-70x70.png
-http://member.fis-ski.com/mobile/css/images/mstile-150x150.png
-http://member.fis-ski.com/mobile/css/images/mstile-310x150.png
-http://member.fis-ski.com/mobile/css/images/mstile-310x310.png
-
+http://member.fis-ski.com/static/mobile/css/images/icons18white.png
+http://member.fis-ski.com/static/images/mobile/ski.png
+http://member.fis-ski.com/static/images/mobile/Skiradius.png
+http://member.fis-ski.com/static/mobile/css/images/FIS_white.png
+http://member.fis-ski.com/static/images/mobile/FIS_white.png
+http://member.fis-ski.com/static/mobile/css/images/FIS_white_36.png
+http://member.fis-ski.com/static/images/mobile/FIS_white_36.png
+http://member.fis-ski.com/static/mobile/css/images/ajax-loader.gif 
+http://member.fis-ski.com/static/mobile/css/images/FIS_white_home.png
+http://member.fis-ski.com/static/mobile/css/images/icons-36-black.png
+http://member.fis-ski.com/static/mobile/css/images/pdf_white.png
+http://member.fis-ski.com/static/mobile/css/images/addtohomelink.png
+http://member.fis-ski.com/static/mobile/css/images/addtohomelink-retina.png
+http://member.fis-ski.com/static/mobile/css/images/empty.gif
 
 # fonts
 
@@ -64,49 +47,32 @@ skicalc_list.htm
 skicalc_info.htm
 
 # css files
-http://member.fis-ski.com/mobile/css/mobile_new.css
-http://member.fis-ski.com/mobile/css/FIS_jquery_mobile.css
-http://member.fis-ski.com/mobile/css/jquery.mobile.structure_1.3.2.min.css
-http://member.fis-ski.com/mobile/css/add2home.css
+http://member.fis-ski.com/static/mobile/css/mobile_new.css
+http://member.fis-ski.com/static/mobile/css/FIS_jquery_mobile.css
+http://member.fis-ski.com/static/mobile/css/jquery.mobile.structure_1.2.0.min.css
+http://member.fis-ski.com/static/mobile/css/add2home.css
 
 # js files
-http://member.fis-ski.com/mobile/scripts/jquery_1.9.1.min.js
-http://member.fis-ski.com/mobile/scripts/jquery.mobile_1.3.2.min.js
-http://member.fis-ski.com/mobile/scripts/mobile_common_fis.js
-http://member.fis-ski.com/mobile/scripts/mobile_offline.js
-http://member.fis-ski.com/mobile/scripts/mobile_skicalc.js
-http://member.fis-ski.com/mobile/scripts/add2home.js
+http://member.fis-ski.com/static/mobile/scripts/mobile_common_fis.js
+http://member.fis-ski.com/static/mobile/scripts/jquery_1.8.2.min.js
+http://member.fis-ski.com/static/mobile/scripts/jquery.mobile_1.2.0.min.js
+http://member.fis-ski.com/static/mobile/scripts/mobile_offline.js
+http://member.fis-ski.com/static/mobile/scripts/mobile_skicalc.js
+http://member.fis-ski.com/static/mobile/scripts/add2home.js
 
 # images
-
-http://member.fis-ski.com/mobile/css/images/ski.png
-http://member.fis-ski.com/mobile/css/images/Skiradius.png
-http://member.fis-ski.com/mobile/css/images/FIS_white.png
-http://member.fis-ski.com/mobile/css/images/FIS_white_36.png
-http://member.fis-ski.com/mobile/css/images/ajax-loader.gif
-http://member.fis-ski.com/mobile/css/images/FIS_white_home.png
-http://member.fis-ski.com/mobile/css/images/icons-18-black.png
-http://member.fis-ski.com/mobile/css/images/icons-36-black.png
-http://member.fis-ski.com/mobile/css/images/icons-18-white.png
-http://member.fis-ski.com/mobile/css/images/icons-36-white.png
-http://member.fis-ski.com/mobile/css/images/pdf_white.png
-http://member.fis-ski.com/mobile/css/images/empty.gif
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-57x57.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-114x114.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-72x72.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-144x144.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-60x60.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-120x120.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-76x76.png
-http://member.fis-ski.com/mobile/css/images/apple-touch-icon-152x152.png
-http://member.fis-ski.com/mobile/css/images/favicon-196x196.png
-http://member.fis-ski.com/mobile/css/images/favicon-160x160.png
-http://member.fis-ski.com/mobile/css/images/favicon-96x96.png
-http://member.fis-ski.com/mobile/css/images/favicon-32x32.png
-http://member.fis-ski.com/mobile/css/images/favicon-16x16.png
-http://member.fis-ski.com/mobile/css/images/mstile-144x144.png
-http://member.fis-ski.com/mobile/css/images/mstile-70x70.png
-http://member.fis-ski.com/mobile/css/images/mstile-150x150.png
-http://member.fis-ski.com/mobile/css/images/mstile-310x150.png
-http://member.fis-ski.com/mobile/css/images/mstile-310x310.png
+http://member.fis-ski.com/static/mobile/css/images/icons18white.png
+http://member.fis-ski.com/static/images/mobile/ski.png
+http://member.fis-ski.com/static/images/mobile/Skiradius.png
+http://member.fis-ski.com/static/mobile/css/images/FIS_white.png
+http://member.fis-ski.com/static/images/mobile/FIS_white.png
+http://member.fis-ski.com/static/mobile/css/images/FIS_white_36.png
+http://member.fis-ski.com/static/images/mobile/FIS_white_36.png
+http://member.fis-ski.com/static/mobile/css/images/ajax-loader.gif
+http://member.fis-ski.com/static/mobile/css/images/FIS_white_home.png
+http://member.fis-ski.com/static/mobile/css/images/icons-36-black.png
+http://member.fis-ski.com/static/mobile/css/images/pdf_white.png
+http://member.fis-ski.com/static/mobile/css/images/addtohomelink.png
+http://member.fis-ski.com/static/mobile/css/images/addtohomelink-retina.png
+http://member.fis-ski.com/static/mobile/css/images/empty.gif
 # fonts
