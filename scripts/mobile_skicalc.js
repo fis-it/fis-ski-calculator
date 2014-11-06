@@ -83,7 +83,7 @@ function makeFooterbar(db){
         html = html + '<ul class="ui-grid-a">\n';
     }
     html = html + '<li class="ui-block-a">\n';
-    html = html + '<a class="ui-btn ui-btn-inline ui-btn-up-b" data-direction="reverse" data-transition="flip" data-theme="b" href="skicalc.htm" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-inline="true">\n';
+    html = html + '<a class="ui-btn ui-btn-inline ui-btn-up-b" data-direction="reverse" data-transition="flip" data-theme="b" href="index.html" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-inline="true">\n';
     html = html + '<span class="ui-btn-inner">\n';
     html = html + '<span class="ui-btn-text">Calculator</span>\n';
     html = html + '</span>\n';
