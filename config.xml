@@ -45,4 +45,6 @@
     <icon src="icons/apple-touch-icon-144x144" width="144" height="144" />
     <access />
     <preference name="permissions" value="none" />      
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarBackgroundColor" value="#002395"/>
 </widget>
