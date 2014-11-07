@@ -46,6 +46,6 @@
     <access />
     <preference name="permissions" value="none" />      
     <preference name="StatusBarOverlaysWebView" value="false"/>
-    <preference name="StatusBarBackgroundColor" value="#002395"/>
+    <preference name="StatusBarBackgroundColor" value="#A7A7A7"/>
     <preference name="StatusBarStyle" value="lightcontent" />
 </widget>
