@@ -31,6 +31,7 @@
     <gap:splash src="splash/Skiradius_splash_768x1024.png" width="768" height="1024" />
     <gap:splash src="splash/Skiradius_splash_1536x2048.png" width="1536" height="2048" />
     <gap:splash src="splash/Skiradius_splash_2048x1536.png" width="2048" height="1536" />
+    <gap:plugin name="org.apache.cordova.statusbar" />
     <icon src="icons/apple-touch-icon-36x36.png" gap:platform="android" gap:density="ldpi" />
     <icon src="icons/apple-touch-icon-48x48.png" gap:platform="android" gap:density="mdpi" />
     <icon src="icons/apple-touch-icon-72x72.png" gap:platform="android" gap:density="hdpi" />
