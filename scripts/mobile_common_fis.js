@@ -105,7 +105,7 @@ function fct_add_favicon(v_url){
     });
 }
 function fct_init(){
-    $('#home').bind("pageshow", function( event, data ){
+    $('#home').bind("pagecontainershow", function( event, data ){
         //$.cookie("fis_last_page", null, {expires: 730, path: "/", domain: "fis-ski.com"} );
         fct_add_favicon('home');
         //for App

@@ -11,8 +11,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 	<!-- <base href="http://member.fis-ski.com" /> -->
 	<link rel="stylesheet" href="css/mobile_new.css" type="text/css"/>
-	<link rel="stylesheet" href="css/FIS_jquery_mobile.css" type="text/css"/>
-	<link rel="stylesheet" href="css/jquery.mobile.structure_1.2.0.min.css" />
+<!--	<link rel="stylesheet" href="css/FIS_jquery_mobile.css" type="text/css"/>-->
+        <link rel="stylesheet" href="css/FIS_jquery_1.4.5_mobile.min.css" />
+<!--	<link rel="stylesheet" href="css/jquery.mobile.structure_1.2.0.min.css" />-->
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 <!--        <link rel="stylesheet" href="css/flatlibrary/dist/css/flat-ui.min.css" />-->
     <link rel="stylesheet" href="css/add2home.css">
     <link rel="apple-touch-icon-precomposed" type="image/png" href="icons/apple-touch-icon-152x152.png" />
@@ -22,8 +24,11 @@
 	    <style type="text/css">@import url(http://member.fis-ski.com/static/mobile/css/mobile_ie.css);</style>
 	<![endif]-->
 	<script src="scripts/mobile_common_fis.js"></script>
-	<script src="scripts/jquery_1.8.2.min.js"></script>
-	<script src="scripts/jquery.mobile_1.2.0.min.js"></script>
+<!--	<script src="scripts/jquery_1.8.2.min.js"></script>-->
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<!--	<script src="scripts/jquery.mobile_1.2.0.min.js"></script>-->
+        <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
     <script type="application/javascript" src="scripts/add2home.js" charset="utf-8"></script>
     <script>
         var checkvalue = 0;  //Global
@@ -117,7 +122,8 @@
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td style="padding-right:2px" width="33%">
-                                <button data-theme="c" type="button" onclick="CalculateSki('0');" tabindex="20">Calculate R</button>
+<!--                                <button data-theme="c" type="button" onclick="CalculateSki('0');" tabindex="20">Calculate R</button>-->
+                                    <button type="button" class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="CalculateSki('0');" tabindex="20">Calculate R</button>
                             </td>
                             <td valign="middle" style="text-align:right;padding-right:2px" class="skicalclegend" width="33%">
                                 <b>Radius (R) in m:</b>
@@ -130,7 +136,7 @@
                         </tr>
                         <tr>
                             <td style="padding-right:2px">
-                                <button data-theme="c" type="button" onclick="CalculateSki('1');" tabindex="22">Calculate T</button>
+                                <button type="button" class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="CalculateSki('1');" tabindex="22">Calculate T</button>
                             </td>
                             <td valign="middle" style="text-align:right;padding-right:2px" class="skicalclegend" >
                                 <b>Radius with 1.5% tolerance (T) in m:</b>
@@ -148,17 +154,17 @@
             </div>
         </div>
         <div class="footerbar"></div>
-        <div data-role="popup" id="alert" data-history="false" data-position-to="window" data-theme="a" data-overlay-theme="c" style="max-width:400px;">
-            <div data-theme="a" data-role="header" role="banner">
+        <div data-role="popup" id="alert" data-history="false" data-position-to="window" data-theme="b" data-overlay-theme="c" style="max-width:400px;">
+            <div data-theme="b" data-role="header" role="banner">
                 <h1>Attention</h1>
             </div>
-            <div data-theme="d" data-role="content" role="main">
+            <div data-theme="a" class="ui-content" role="main">
                 <p id="alerttext"></p>
-                <a data-theme="b" data-rel="back" data-inline="true" data-role="button">Ok</a>
+                <a class="ui-btn ui-corner-all ui-shadow ui-btn-icon-right" data-rel="back" data-inline="true">Ok</a>
             </div>
         </div>
-        <div data-role="popup" id="alertauto" data-history="false" data-position-to="window" data-theme="a" data-overlay-theme="c" style="max-width:400px;">
-            <div data-theme="d" data-role="content" role="main">
+        <div data-role="popup" id="alertauto" data-history="false" data-position-to="window" data-theme="b" data-overlay-theme="c" style="max-width:400px;">
+            <div data-theme="a" class="ui-content" role="main">
                 <p id="alerttextauto"></p>
             </div>
         </div>

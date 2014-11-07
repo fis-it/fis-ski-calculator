@@ -1,9 +1,9 @@
-$(document).bind('pageinit', function (){
+$(document).bind('pagecreate', function (){
 	updateStatus("init page",0);
         onInit();
 
 });
-$(document).bind('pageshow', function (){
+$(document).bind('pagecontainershow', function (){
     if (document.getElementById("bib")){
         if (!window.openDatabase) {
             makeBIBtable(0);
@@ -76,36 +76,24 @@ function createTables(){
 function makeFooterbar(db){
     var html = "";
     html = '<div class="ui-footer ui-bar-a ui-footer-fixed slideup" data-position="fixed" data-id="foo1" data-role="footer" role="contentinfo">\n';
-    html = html + '<div class="ui-navbar ui-mini" data-role="navbar" role="navigation">\n';
+    html = html + '<div class="ui-navbar" data-role="navbar" role="navigation">\n'; //ui-mini deleted
     if(db == 1){
         html = html + '<ul class="ui-grid-b">\n';
     }else{
         html = html + '<ul class="ui-grid-a">\n';
     }
     html = html + '<li class="ui-block-a">\n';
-    html = html + '<a class="ui-btn ui-btn-inline ui-btn-up-b" data-direction="reverse" data-transition="flip" data-theme="b" href="index.html" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-inline="true">\n';
-    html = html + '<span class="ui-btn-inner">\n';
-    html = html + '<span class="ui-btn-text">Calculator</span>\n';
-    html = html + '</span>\n';
-    html = html + '</a>\n';
+    html = html + '<a href="index.html" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow" data-transition="flip" data-direction="reverse">Calculator</a>';
     html = html +  '</li>\n';
     if(db == 1){
         html = html + '<li class="ui-block-b">\n';
-        html = html + '<a class="ui-btn ui-btn-up-b ui-btn-inline" data-transition="flip" data-theme="b" href="skicalc_list.htm" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-inline="true">\n';
-        html = html + '<span class="ui-btn-inner">\n';
-        html = html + '<span class="ui-btn-text">Saved List</span>\n';
-        html = html + '</span>\n';
-        html = html + '</a>\n';
+        html = html + '<a href="skicalc_list.htm" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow" data-transition="flip">Saved List</a>';
         html = html + '</li>\n';
         html = html + '<li class="ui-block-c">\n';
     }else{
         html = html + '<li class="ui-block-b">\n';  
     }
-    html = html + '<a class="ui-btn ui-btn-up-b ui-btn-inline" data-transition="flip" data-theme="b" href="skicalc_info.htm" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-inline="true">\n';
-    html = html + '<span class="ui-btn-inner">\n';
-    html = html + '<span class="ui-btn-text">Info</span>\n';
-    html = html + '</span>\n';
-    html = html + '</a>\n';
+    html = html + '<a href="skicalc_info.htm" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow" data-transition="flip">Info</a>';
     html = html + '</li>\n';
     html = html + '</ul>\n';
     html = html + '</div>\n';
@@ -168,11 +156,8 @@ function makeSavebutton(db){
     html = html + '<tr>\n';
     if(db == 1){
         html = html + '<td width="33%" style="padding-right:2px">\n';
-        html = html + '<div class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="" data-iconpos="" data-theme="c" aria-disabled="false">\n';
-        html = html + '<span class="ui-btn-inner ui-btn-corner-all">\n';
-        html = html + '<span class="ui-btn-text">Save</span>\n';
-        html = html + '</span>\n';
-        html = html + '<button class="ui-btn-hidden" tabindex="24" onclick="onSave()" type="button" data-theme="c" aria-disabled="false">Save</button>\n';
+        html = html + '<button class="ui-btn ui-btn-b ui-shadow ui-corner-all" tabindex="24" onclick="onSave()">\n';
+        html = html + 'Save</button>\n';
         html = html + '</div>\n';
         html = html + '</td>\n';
     }
@@ -181,12 +166,8 @@ function makeSavebutton(db){
     }else{
        html = html + '<td>\n';
     }
-    html = html + '<div class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="" data-iconpos="" data-theme="b" aria-disabled="false">\n';
-    html = html + '<span class="ui-btn-inner ui-btn-corner-all">\n';
-    html = html + '<span class="ui-btn-text">Reset</span>\n';
-    html = html + '</span>\n';
-    html = html + '<button class="ui-btn-hidden" tabindex="26" onclick="ResetCalc()" type="button" data-theme="b" aria-disabled="false">Reset</button>\n';
-    html = html + '</div>\n';
+    html = html + '<button class="ui-btn ui-btn-b ui-shadow ui-corner-all" tabindex="24" onClick="ResetCalc()" type="reset">\n';
+    html = html + 'Reset</button>\n';
     html = html + '</td>\n';
     html = html + '</tr>\n';
     html = html + '</tbody>\n';
@@ -607,23 +588,31 @@ function emailLink(emailarray,csvarray,iPhone){
 	document.getElementById('emailbutton').innerHTML = '<div class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Email List</span></span><button class="ui-btn-hidden" tabindex="26" onclick="parent.location=\'mailto:?subject=Ski%20radius%20calculator%20list%20from%20'+createEmailDate()+'&body='+encodeURIComponent(emailbody)+'\'\" type="button" data-theme="c" aria-disabled="false">Email List</button></div>';
 }
 function ResetCalc() {
-	document.getElementById('bib').value = "";
-	document.getElementById('lengthTOT').value = "";
-	document.getElementById('lengthW').value = "";
-	document.getElementById('lengthH').innerHTML = "";
-	document.getElementById('lengthS').innerHTML = "";
-	document.getElementById('length1').innerHTML = "";
-	document.getElementById('length2').innerHTML = "";
-	document.getElementById('length').innerHTML = "";
-	document.getElementById('front').value = "";
-	document.getElementById('middle').value = "";
-	document.getElementById('rear').value = "";
-	document.getElementById('radius').innerHTML = "";
-	document.getElementById('tolerance').innerHTML = "";
-    if(document.getElementById('bib')) {
-        document.getElementById('bib').focus();
+//        $('#bib').val = "";
+//	document.getElementById('bib').value = "";
+//	document.getElementById('lengthTOT').value = "";
+//	document.getElementById('lengthW').value = "";
+        $('#lengthH').html("");
+        $('#lengthS').html("");
+        $('#length1').html("");
+        $('#length2').html("");
+        $('#length').html("");
+        $('#radius').html("");
+        $('#tolerance').html("");
+//	document.getElementById('lengthH').innerHTML = "";
+//	document.getElementById('lengthS').innerHTML = "";
+//	document.getElementById('length1').innerHTML = "";
+//	document.getElementById('length2').innerHTML = "";
+//	document.getElementById('length').innerHTML = "";
+////	document.getElementById('front').value = "";
+////	document.getElementById('middle').value = "";
+////	document.getElementById('rear').value = "";
+//	document.getElementById('radius').innerHTML = "";
+//	document.getElementById('tolerance').innerHTML = "";
+    if(($('#bib').val())=== true) {
+        $('#bib').focus();
     }else{
-        document.getElementById('lengthTOT').focus();
+        $('#lengthTOT').focus();
     }
 }
 function trim(stringToTrim) {
@@ -755,25 +744,25 @@ function PreCalc(){
 }
 
 function CalculateSki(mode){
-	if (trim(document.getElementById('lengthTOT').value) != ""){
-		if (isNaN(document.getElementById('lengthTOT').value)=== false) {
-			LTOT = parseFloat(document.getElementById('lengthTOT').value);
+	if ($.trim($('#lengthTOT').val()) != ""){
+		if (isNaN($('#lengthTOT').val()) === false) {
+			LTOT = parseFloat($('#lengthTOT').val());
 		}else{
 			alert_value("Value for 'Ski total lenght' is not a number!","lengthTOT");
 			return;
 		}
-	}else{
+	} else {
 		alert_value("Please enter a correct value for:<br>'Ski total lenght'!",'lengthTOT');
 		return;             
 	}
-	if (trim(document.getElementById('lengthW').value) != ""){
-		if (isNaN(document.getElementById('lengthW').value)=== false) {
-			LW = parseFloat(document.getElementById('lengthW').value);
+        if ($.trim($('#lengthW').val()) != ""){
+		if (isNaN($('#lengthW').val())=== false) {
+			LW = parseFloat($('#lengthW').val());
 		}else{
 			alert_value("Value for 'Ski lenght rear' is not a number!","lengthW");
 			return;
-		}
-	}else{
+                }
+	} else {
 		alert_value("Please enter a correct value for:<br>'Ski lenght rear'!",'lengthW')  
 		return;
 	}
@@ -781,9 +770,9 @@ function CalculateSki(mode){
 		alert_bigger("Value for 'Ski lenght rear' is bigger than the value for 'Ski total lenght'. Please check the values.","lengthTOT");
 		return;
 	}
-	if (trim(document.getElementById('front').value) != ""){
-		if (isNaN(document.getElementById('front').value)=== false) {
-			S = parseFloat(document.getElementById('front').value);
+	if ($.trim($('#front').val()) != ""){
+		if (isNaN($('#front').val()) === false) {
+			S = parseFloat($('#front').val());
 			window.console && console.log("S=" + S);
 		}else{
 			alert_value("Value for:<br>'Front ski width' is not a number!","front");
@@ -793,9 +782,9 @@ function CalculateSki(mode){
 		alert_value("Please enter a correct value for:<br>'Front ski width'!",'front') 
 		return;
 	}
-	if (trim(document.getElementById('middle').value) != ""){
-		if (isNaN(document.getElementById('middle').value)=== false) {
-			W = parseFloat(document.getElementById('middle').value);
+	if ($.trim($('#middle').val()) != ""){
+		if (isNaN($('#middle').val())=== false) {
+			W = parseFloat($('#middle').val());
 			window.console && console.log("W=" + W);
 		}else{
 			alert_value("Value for 'Middle ski width' is not a number!","middle");
@@ -805,9 +794,9 @@ function CalculateSki(mode){
 		alert_value("Please enter a correct value for:<br>'Middle ski width'!",'middle')  
 		return
 	}
-	if (trim(document.getElementById('rear').value) != ""){
-		if (isNaN(document.getElementById('rear').value)=== false) {
-			H = parseFloat(document.getElementById('rear').value);
+	if ($.trim($('#rear').val())){
+		if (isNaN($('#rear').val())=== false) {
+			H = parseFloat($('#rear').val());
 			window.console && console.log("H=" + H);
 		}else{
 			alert_value("Value for 'Rear ski width' is not a number!","rear");
@@ -854,16 +843,17 @@ function CalculateSki(mode){
 	window.console && console.log("Radius=" + R_round(R,2));
 	window.console && console.log("mode=" + mode);
 	
-	document.getElementById('lengthH').innerHTML = LH;
-	document.getElementById('lengthS').innerHTML = LS;
-	document.getElementById('length1').innerHTML = L1;
-	document.getElementById('length2').innerHTML = L2;
-	document.getElementById('length').innerHTML = L;
-	document.getElementById('radius').innerHTML = R_round(R,2);
+	$('#lengthH').html(LH);
+	$('#lengthS').html(LS);
+	$('#length1').html(L1);
+	$('#length2').html(L2);
+	$('#length').html(L);
+	$('#radius').html(R_round(R,2));
 
 	if (mode == '1'){
 		var T = R + R * 0.015
 		window.console && console.log("Tolerance=" + R_round(T,2));
-		document.getElementById('tolerance').innerHTML = R_round(T,2);  
+		$('#tolerance').html(R_round(T,2));  
 	}
+        return;
 }           
