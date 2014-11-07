@@ -156,7 +156,7 @@ function makeSavebutton(db){
     html = html + '<tr>\n';
     if(db == 1){
         html = html + '<td width="33%" style="padding-right:2px">\n';
-        html = html + '<button class="ui-btn ui-btn-b ui-shadow ui-corner-all" tabindex="24" onclick="onSave()">\n';
+        html = html + '<button class="ui-btn ui-btn-b ui-shadow ui-corner-all" tabindex="24" type="button" onclick="onSave()">\n';
         html = html + 'Save</button>\n';
         html = html + '</div>\n';
         html = html + '</td>\n';
@@ -585,7 +585,7 @@ function emailLink(emailarray,csvarray,iPhone){
 	}
 //	var test = encodeURIComponent(createEmailTable(emailarray));
 	//updateStatus("emailArray: "+emailarray,0);
-	document.getElementById('emailbutton').innerHTML = '<div class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" aria-disabled="false"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Email List</span></span><button class="ui-btn-hidden" tabindex="26" onclick="parent.location=\'mailto:?subject=Ski%20radius%20calculator%20list%20from%20'+createEmailDate()+'&body='+encodeURIComponent(emailbody)+'\'\" type="button" data-theme="c" aria-disabled="false">Email List</button></div>';
+	document.getElementById('emailbutton').innerHTML = '<button data-theme="c" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'mailto:?subject=Ski%20radius%20calculator%20list%20from%20'+createEmailDate()+'&body='+encodeURIComponent(emailbody)+'\'\" tabindex="26">Email List</button>';
 }
 function ResetCalc() {
 //        $('#bib').val = "";
