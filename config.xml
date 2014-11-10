@@ -43,5 +43,15 @@
     <icon src="icons/apple-touch-icon-152x152" width="152" height="152" />
     <icon src="icons/apple-touch-icon-144x144" width="144" height="144" />
     <access />
-    <preference name="permissions" value="none" />      
+    <preference name="permissions" value="none" />   
+    <preference name="permissions" value="none" />
+    <feature name="Device">
+      <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="StatusBar">
+      <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <preference name="StatusBarBackgroundColor" value="#A7A7A7"/>
+    <preference name="StatusBarStyle" value="lightcontent" />
 </widget>
