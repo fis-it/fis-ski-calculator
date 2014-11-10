@@ -1,47 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id="com.fis-ski.skicalculator" 
-        version="1.0.0" 
-        versioncode="10">
-    <name>Ski Radius Calculator</name>
-    <Description>Help you to calculate the radius ski according to the latest FIS rules</Description>
-    <author href="http://www.fis-ski.com">
-        FIS IT department
-    </author>
-    <preference name="phonegap-version" value="3.6.3" />
-    <preference name="orientation" value="both" />
-    <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="false" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="stay-in-webview" value="true" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <gap:splash src="splash/Skiradius_splash_200x320.png" />
-    <gap:splash src="splash/Skiradius_splash_200x320.png" gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="splash/Skiradius_splash_320x480.png" gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="splash/Skiradius_splash_480x800.png" gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="splash/Skiradius_splash_720x1280.png" gap:platform="android" gap:density="xhdpi" />
-    <gap:splash src="splash/Skiradius_splash_320x480.png" width="320" height="480" />
-    <gap:splash src="splash/Skiradius_splash_480x320.png" width="480" height="320" />
-    <gap:splash src="splash/Skiradius_splash_640x960.png" width="640" height="960" />
-    <gap:splash src="splash/Skiradius_splash_960x640.png" width="960" height="640" />
-    <gap:splash src="splash/Skiradius_splash_640x1136.png" width="640" height="1136" />
-    <gap:splash src="splash/Skiradius_splash_1136x640.png" width="1136" height="640" />
-    <gap:splash src="splash/Skiradius_splash_1024x768.png" width="1024" height="768" />
-    <gap:splash src="splash/Skiradius_splash_768x1024.png" width="768" height="1024" />
-    <gap:splash src="splash/Skiradius_splash_1536x2048.png" width="1536" height="2048" />
-    <gap:splash src="splash/Skiradius_splash_2048x1536.png" width="2048" height="1536" />
-    <icon src="icons/apple-touch-icon-36x36.png" gap:platform="android" gap:density="ldpi" />
-    <icon src="icons/apple-touch-icon-48x48.png" gap:platform="android" gap:density="mdpi" />
-    <icon src="icons/apple-touch-icon-72x72.png" gap:platform="android" gap:density="hdpi" />
-    <icon src="icons/apple-touch-icon-96x96.png" gap:platform="android" gap:density="xhdpi" />
-    <icon src="icons/apple-touch-icon-57x57.png" width="57" height="57" />
-    <icon src="icons/apple-touch-icon-72x72.png" gap:platform="ios" width="72" height="72" />
-    <icon src="icons/apple-touch-icon-114x114.png" width="114" height="114" />
-    <icon src="icons/apple-touch-icon-76x76" width="76" height="76" />
-    <icon src="icons/apple-touch-icon-120x120" width="120" height="120" />
-    <icon src="icons/apple-touch-icon-152x152" width="152" height="152" />
-    <icon src="icons/apple-touch-icon-144x144" width="144" height="144" />
-    <access />
-    <preference name="permissions" value="none" />      
+xmlns:gap = "http://phonegap.com/ns/1.0"
+id="com.fis-ski.skicalculator"
+version="1.0.0"
+versioncode="10">
+<name>Ski Radius Calc</name>
+<Description>Help you to calculate the radius ski according to the latest FIS rules</Description>
+<author href="http://www.fis-ski.com">
+FIS IT department
+</author>
+<preference name="phonegap-version" value="3.6.3" />
+<preference name="orientation" value="both" />
+<preference name="target-device" value="universal" />
+<preference name="fullscreen" value="false" />
+<preference name="webviewbounce" value="false" />
+<preference name="stay-in-webview" value="no" />
+<preference name="show-splash-screen-spinner" value="true" />
+<gap:splash src="splash/Skiradius_splash_200x320.png" />
+<gap:splash src="splash/Skiradius_splash_200x320.png" gap:platform="android" gap:density="ldpi" />
+<gap:splash src="splash/Skiradius_splash_320x480.png" gap:platform="android" gap:density="mdpi" />
+<gap:splash src="splash/Skiradius_splash_480x800.png" gap:platform="android" gap:density="hdpi" />
+<gap:splash src="splash/Skiradius_splash_720x1280.png" gap:platform="android" gap:density="xhdpi" />
+<gap:splash src="splash/Skiradius_splash_320x480.png" width="320" height="480" />
+<gap:splash src="splash/Skiradius_splash_480x320.png" width="480" height="320" />
+<gap:splash src="splash/Skiradius_splash_640x960.png" width="640" height="960" />
+<gap:splash src="splash/Skiradius_splash_960x640.png" width="960" height="640" />
+<gap:splash src="splash/Skiradius_splash_640x1136.png" width="640" height="1136" />
+<gap:splash src="splash/Skiradius_splash_1136x640.png" width="1136" height="640" />
+<gap:splash src="splash/Skiradius_splash_1024x768.png" width="1024" height="768" />
+<gap:splash src="splash/Skiradius_splash_768x1024.png" width="768" height="1024" />
+<gap:splash src="splash/Skiradius_splash_1536x2048.png" width="1536" height="2048" />
+<gap:splash src="splash/Skiradius_splash_2048x1536.png" width="2048" height="1536" />
+<icon src="icons/apple-touch-icon-36x36.png" gap:platform="android" gap:density="ldpi" />
+<icon src="icons/apple-touch-icon-48x48.png" gap:platform="android" gap:density="mdpi" />
+<icon src="icons/apple-touch-icon-72x72.png" gap:platform="android" gap:density="hdpi" />
+<icon src="icons/apple-touch-icon-96x96.png" gap:platform="android" gap:density="xhdpi" />
+<icon src="icons/apple-touch-icon-57x57.png" width="57" height="57" />
+<icon src="icons/apple-touch-icon-72x72.png" gap:platform="ios" width="72" height="72" />
+<icon src="icons/apple-touch-icon-114x114.png" width="114" height="114" />
+<icon src="icons/apple-touch-icon-76x76" width="76" height="76" />
+<icon src="icons/apple-touch-icon-120x120" width="120" height="120" />
+<icon src="icons/apple-touch-icon-152x152" width="152" height="152" />
+<icon src="icons/apple-touch-icon-144x144" width="144" height="144" />
+<access />
+<preference name="permissions" value="none" />
+<feature name="Device">
+<param name="ios-package" value="CDVDevice" />
+</feature>
+<feature name="StatusBar">
+<param name="ios-package" value="CDVStatusBar" onload="true" />
+</feature>
+<preference name="StatusBarOverlaysWebView" value="false"/>
+<preference name="StatusBarBackgroundColor" value="#A7A7A7"/>
+<preference name="StatusBarStyle" value="lightcontent" />
 </widget>
