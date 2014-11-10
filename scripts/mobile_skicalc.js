@@ -75,6 +75,28 @@ function createTables(){
 }
 function makeFooterbar(db){
     var html = "";
+//    html = html + '<div data-role="footer" data-position="fixed" data-id="foo1">';
+//    html = html + '<div data-role="navbar">\n'; //ui-mini deleted
+////    if(db == 1){
+////        html = html + '<ul class="ui-grid-b">\n';
+////    }else{
+////        html = html + '<ul class="ui-grid-a">\n';
+////    }
+//    html = html + '<ul>';
+//    html = html + '<li>\n';
+//    html = html + '<a href="index.html" class="ui-btn-active">Calculator</a>';
+//    html = html +  '</li>\n';
+//    html = html + '<li>\n';
+//    if(db == 1){
+//        html = html + '<a href="skicalc_list.htm">Saved List</a>';
+//        html = html + '</li>\n';
+//        html = html + '<li>\n';
+//    }
+//    html = html + '<a href="skicalc_info.htm">Info</a>';
+//    html = html + '</li>\n';
+//    html = html + '</ul>\n';
+//    html = html + '</div>\n';
+//    html = html + '</div>\n';
     html = '<div class="ui-footer ui-bar-a ui-footer-fixed slideup" data-position="fixed" data-id="foo1" data-role="footer" role="contentinfo">\n';
     html = html + '<div class="ui-navbar" data-role="navbar" role="navigation">\n'; //ui-mini deleted
     if(db == 1){
@@ -83,17 +105,17 @@ function makeFooterbar(db){
         html = html + '<ul class="ui-grid-a">\n';
     }
     html = html + '<li class="ui-block-a">\n';
-    html = html + '<a href="index.html" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow" data-transition="flip" data-direction="reverse">Calculator</a>';
+    html = html + '<a href="index.html" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow">Calculator</a>';
     html = html +  '</li>\n';
     if(db == 1){
         html = html + '<li class="ui-block-b">\n';
-        html = html + '<a href="skicalc_list.htm" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow" data-transition="flip">Saved List</a>';
+        html = html + '<a href="skicalc_list.htm" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow">Saved List</a>';
         html = html + '</li>\n';
         html = html + '<li class="ui-block-c">\n';
     }else{
         html = html + '<li class="ui-block-b">\n';  
     }
-    html = html + '<a href="skicalc_info.htm" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow" data-transition="flip">Info</a>';
+    html = html + '<a href="skicalc_info.htm" class="ui-btn ui-btn-b ui-btn-inline ui-icon-shadow">Info</a>';
     html = html + '</li>\n';
     html = html + '</ul>\n';
     html = html + '</div>\n';
@@ -135,7 +157,8 @@ function makeBIBtable(db){
 //    html = html + '<tr>\n';
 //    if(db == 1){
 //        html = html + '<td style="padding-right:1px">\n';
-//        html = html + '<input id="bib" class="skicalcdata ui-input-text ui-body-a ui-corner-all ui-shadow-inset" type="number" tabindex="8" valign="middle" name="bib" maxlength="5" size="5">\n';
+//        html = html + '<input id="bib" class="Footer
+//         ui-input-text ui-body-a ui-corner-all ui-shadow-inset" type="number" tabindex="8" valign="middle" name="bib" maxlength="5" size="5">\n';
 //        html = html + '</td>\n';
 //    }
 //    html = html + '<td style="padding-right:1px">\n';

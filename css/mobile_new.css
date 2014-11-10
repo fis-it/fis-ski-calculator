@@ -814,11 +814,11 @@ input.skicalcdata.ui-input-text {
 	}
 #skicalcbutton{
         display:none;
-        }
+}
 .footerbar{
-        height:35px;
-            
-        }
+        height: 35px;
+        overflow: hidden;    
+}
 @media screen and (min-width: 500px) {
 	.skicalclegend{
 		font-size: 10pt;
