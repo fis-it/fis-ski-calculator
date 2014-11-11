@@ -44,12 +44,12 @@ FIS IT department
 <icon src="icons/apple-touch-icon-144x144" width="144" height="144" />
 <gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
 <preference name="permissions" value="none" />
-<feature name="Device">
+<!-- <feature name="Device">
 <param name="ios-package" value="CDVDevice" />
 </feature>
 <feature name="StatusBar">
 <param name="ios-package" value="CDVStatusBar" onload="true" />
-</feature>
+</feature> -->
 <preference name="StatusBarOverlaysWebView" value="false"/>
 <preference name="StatusBarBackgroundColor" value="#A7A7A7"/>
 <preference name="StatusBarStyle" value="lightcontent" />
