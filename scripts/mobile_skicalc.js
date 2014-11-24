@@ -1,7 +1,5 @@
 $(document).ready(function() {
-	if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) {
-		StatusBar.overlaysWebView(false);
-	}
+	StatusBar.overlaysWebView(false);
 });
 $(document).bind('pagecreate', function (){
 	updateStatus("init page",0);
