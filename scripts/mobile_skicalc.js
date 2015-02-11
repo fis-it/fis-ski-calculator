@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	StatusBar.overlaysWebView(false);
 });
 /*function onDeviceReady() {
