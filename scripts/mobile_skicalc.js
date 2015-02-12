@@ -8,13 +8,6 @@ $(document).bind('pagecreate', function (){
         onInit();
 
 });
-  /* $(document).on('keydown', 'input', function(e, ui) {
-        var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
-        if(key === 13 && e.target.type !== 'submit'){
-            e.preventDefault();
-            $(this).nextAll('input:visible').eq(0).focus();
-        }
-});*/
  $('input').on("keydown", function(e) {
             /* ENTER PRESSED*/
             if (e.keyCode == 13) {
@@ -31,45 +24,6 @@ $(document).bind('pagecreate', function (){
                 return false;
             }
         });
-        
-        /*(function($) {
-    $.fn.enterAsTab = function(options) {
-        var settings = $.extend({
-            'allowSubmit': false
-        }, options);
-        $(this).find('input, select, textarea, button').live("keydown", {localSettings: settings}, function(event) {
-            if (settings.allowSubmit) {
-                var type = $(this).attr("type");
-                if (type == "submit") {
-                    return true;
-                }
-            }
-            if (event.keyCode == 13) {
-                var inputs = $(this).parents("form").eq(0).find(":input:visible:not(:disabled):not([readonly])");
-                var idx = inputs.index(this);
-                if (idx == inputs.length - 1) {
-                    idx = -1;
-                } else {
-                    inputs[idx + 1].focus(); // handles submit buttons
-                }
-                try {
-                    inputs[idx + 1].select();
-                }
-                catch (err) {
-                   
-                }
-                return false;
-            }
-        });
-        return this;
-    };
-})(jQuery);
-
-$("#form").enterAsTab({ 'allowSubmit': true});
-
-
-console.log($('#form').find(":input:visible:not(:disabled):not([readonly])"));*/
-
 $(document).bind('pagecontainershow', function (){
     if (document.getElementById("bib")){
         if (!window.openDatabase) {
