@@ -1,5 +1,6 @@
 $(document).bind('pagecreate', function (){
 	updateStatus("init page",0);
+	StatusBar.overlaysWebView(false);
         onInit();
 
 });
@@ -24,7 +25,6 @@ $(document).bind('pagecontainershow', function (){
 var localDB = null;
 
 function onInit(){
-    StatusBar.overlaysWebView(false);
     try {
         if (!window.openDatabase) {
             updateStatus("Error: DB not supported",0);
