@@ -1,10 +1,10 @@
 $(document).bind('pagecreate', function (){
 	updateStatus("init page",0);
 	
-	if(StatusBar.isVisible) {
+	/*if(StatusBar.isVisible) {
 		StatusBar.overlaysWebView(false);
 		StatusBar.show();
-	}
+	}*/
         onInit();
 
 });
