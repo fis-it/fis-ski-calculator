@@ -35,10 +35,10 @@
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
 		$(document).ready(function() {
-		if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) {
+		//if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) {
 			StatusBar.overlaysWebView(false);
 			// StatusBar.backgroundColorByHexString("#00388C");
-		}
+		//}
 	});
 	alert("inside on device ready");
 	}
