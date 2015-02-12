@@ -6,18 +6,31 @@ $(document).bind('pagecreate', function (){
 		StatusBar.show();
 	}*/
         onInit();
-        allowNextField();
 
 });
-function allowNextField(){
-    $(document).on('keydown', 'input', function(e, ui) {
+   $(document).on('keydown', 'input', function(e, ui) {
         var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
         if(key === 13 && e.target.type !== 'submit'){
             e.preventDefault();
             $(this).nextAll('input:visible').eq(0).focus();
         }
 });
-}
+ $('input').on("keypress", function(e) {
+            /* ENTER PRESSED*/
+            if (e.keyCode == 13) {
+                /* FOCUS ELEMENT */
+                var inputs = $(this).parents("form").eq(0).find(":input");
+                var idx = inputs.index(this);
+
+                if (idx == inputs.length - 1) {
+                    inputs[0].select()
+                } else {
+                    inputs[idx + 1].focus(); //  handles submit buttons
+                    inputs[idx + 1].select();
+                }
+                return false;
+            }
+        });
 
 $(document).bind('pagecontainershow', function (){
     if (document.getElementById("bib")){
