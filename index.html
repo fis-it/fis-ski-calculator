@@ -37,12 +37,12 @@
 	        StatusBar.overlaysWebView(false); //Turns off web view overlay.
 	        alert("inside");
 	}, false);
-	if(window.StatusBar) {
-  // org.apache.cordova.statusbar required
-  		StatusBar.styleDefault();
-	} else {
-		alert("no status bar");
-	}
+	 onDeviceReady: function() {
+	        if (window.device.platform === 'iOS' && parseFloat(window.device.version) === 7.0)        
+	            StatusBar.overlaysWebView(false);
+	        app.receivedEvent('deviceready');
+	        alert("inside2");
+    	}
         //document.addEventListener("deviceready", onDeviceReady, false);
         //function onDeviceReady() {
 //	$(document).ready(function() {
