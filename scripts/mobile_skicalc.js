@@ -32,7 +32,7 @@ $(document).bind('pagecreate', function (){
             }
         });
         
-        (function($) {
+        /*(function($) {
     $.fn.enterAsTab = function(options) {
         var settings = $.extend({
             'allowSubmit': false
@@ -68,7 +68,7 @@ $(document).bind('pagecreate', function (){
 $("#form").enterAsTab({ 'allowSubmit': true});
 
 
-console.log($('#form').find(":input:visible:not(:disabled):not([readonly])"));
+console.log($('#form').find(":input:visible:not(:disabled):not([readonly])"));*/
 
 $(document).bind('pagecontainershow', function (){
     if (document.getElementById("bib")){
