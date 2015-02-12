@@ -1,13 +1,3 @@
-$(document).ready(function() {
-	StatusBar.overlaysWebView(false);
-});
-function onDeviceReady() {
-$(document).ready(function() {
-if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) {
-StatusBar.overlaysWebView(false);
-}
-});
-}
 $(document).bind('pagecreate', function (){
 	updateStatus("init page",0);
         onInit();
@@ -35,6 +25,7 @@ var localDB = null;
 
 function onInit(){
     try {
+    	StatusBar.overlaysWebView(false);
         if (!window.openDatabase) {
             updateStatus("Error: DB not supported",0);
             $('.footerbar').append(makeFooterbar(0));
