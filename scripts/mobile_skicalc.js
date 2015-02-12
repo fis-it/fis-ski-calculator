@@ -1,6 +1,6 @@
 $(document).bind('pagecreate', function (){
 	updateStatus("init page",0);
-	StatusBar.overlaysWebView(false);
+	//StatusBar.overlaysWebView(false);
         onInit();
 
 });
