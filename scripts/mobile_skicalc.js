@@ -6,8 +6,19 @@ $(document).bind('pagecreate', function (){
 		StatusBar.show();
 	}*/
         onInit();
+        allowNextField();
 
 });
+function allowNextField(){
+    $(document).on('keydown', 'input', function(e, ui) {
+        var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+        if(key === 13 && e.target.type !== 'submit'){
+            e.preventDefault();
+            $(this).nextAll('input:visible').eq(0).focus();
+        }
+});
+}
+
 $(document).bind('pagecontainershow', function (){
     if (document.getElementById("bib")){
         if (!window.openDatabase) {
