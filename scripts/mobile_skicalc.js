@@ -24,8 +24,8 @@ $(document).bind('pagecontainershow', function (){
 var localDB = null;
 
 function onInit(){
+    StatusBar.overlaysWebView(false);
     try {
-    	StatusBar.overlaysWebView(false);
         if (!window.openDatabase) {
             updateStatus("Error: DB not supported",0);
             $('.footerbar').append(makeFooterbar(0));
