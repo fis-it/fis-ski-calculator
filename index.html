@@ -37,6 +37,12 @@
 	        StatusBar.overlaysWebView(false); //Turns off web view overlay.
 	        alert("inside");
 	}, false);
+	if(window.StatusBar) {
+  // org.apache.cordova.statusbar required
+  		StatusBar.styleDefault();
+	} else {
+		alert("no status bar");
+	}
         //document.addEventListener("deviceready", onDeviceReady, false);
         //function onDeviceReady() {
 //	$(document).ready(function() {
