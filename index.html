@@ -32,13 +32,17 @@
     <script type="application/javascript" src="scripts/add2home.js" charset="utf-8"></script>
     <script>
         var checkvalue = 0;  //Global
+        document.addEventListener('deviceready', function () {
+	        navigator.splashscreen.hide(); //Hides the splash screen for your app.
+	        StatusBar.overlaysWebView(false); //Turns off web view overlay.
+	        alert("inside");
+	}, false);
         //document.addEventListener("deviceready", onDeviceReady, false);
         //function onDeviceReady() {
 //	$(document).ready(function() {
 		//if (device.platform === 'iOS' && parseFloat(device.version) >= 7.0) {
-						alert("before on device ready");
-			StatusBar.overlaysWebView(false);
-			StatusBar.backgroundColorByHexString("#00388C");
+			//StatusBar.overlaysWebView(false);
+			//StatusBar.backgroundColorByHexString("#00388C");
 			alert("after on device ready");
 		//}
 //	});
