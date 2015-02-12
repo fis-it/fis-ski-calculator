@@ -3,6 +3,7 @@ $(document).bind('pagecreate', function (){
 	
 	if(StatusBar.isVisible) {
 		StatusBar.overlaysWebView(false);
+		StatusBar.show();
 	}
         onInit();
 
