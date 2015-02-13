@@ -2,8 +2,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 xmlns:gap = "http://phonegap.com/ns/1.0"
 id="com.fis-ski.skicalculator"
-version="1.0.0"
-versioncode="10">
+version="1.2.0"
+versioncode="1">
 <name>Ski Radius Calc</name>
 <Description>Help you to calculate the radius ski according to the latest FIS rules</Description>
 <author href="http://www.fis-ski.com">
