@@ -57,4 +57,8 @@ FIS IT department
 <gap:config-file platform="android" parent="/manifest">
     <supports-screens android:xlargeScreens="true" android:largeScreens="true" android:smallScreens="true" />
 </gap:config-file>
+    <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" source="pgb" />
+    <access origin="*" browserOnly="true"/>
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
 </widget>
