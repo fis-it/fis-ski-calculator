@@ -48,10 +48,6 @@ FIS IT department
 <feature name="Device">
 <param name="ios-package" value="CDVDevice" />
 </feature>
-<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
-<feature name="StatusBar">
-  <param name="ios-package" value="CDVStatusBar" onload="true" />
-</feature>
 <gap:config-file platform="ios" parent="UIStatusBarHidden">
     <true/>
 </gap:config-file>
