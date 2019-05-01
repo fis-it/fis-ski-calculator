@@ -3,7 +3,7 @@
 xmlns:gap = "http://phonegap.com/ns/1.0"
 xmlns:android = "http://schemas.android.com/apk/res/android"
 id="com.fis-ski.skicalculator"
-version="1.3.0"
+version="1.3.1"
 versioncode="1">
 <name>Ski Radius Calc</name>
 <Description>Help you to calculate the radius ski according to the latest FIS rules</Description>
