@@ -428,6 +428,10 @@ function queryAndUpdateOverview(){
                             emailLink(csvArray,"",0);
                         }
                     }
+		    if(document.getElementById('whatsappbutton')) {
+			var text = dataToCSV(csvArray);
+                       	document.getElementById('whatsappbutton').innerHTML = '<button data-theme="c" style="background:#25d366 !important" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'whatsapp://send/?text='+encodeURIComponent(emailbody)+'\" tabindex="26">Whatsapp List</button>';
+                    }
 //					if(document.getElementById('csvbutton')) {
 //						csvLink(csvArray);	
 //					}
