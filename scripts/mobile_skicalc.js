@@ -428,10 +428,11 @@ function queryAndUpdateOverview(){
                             emailLink(csvArray,"",0);
                         }
                     }
-		    //if(document.getElementById('whatsappbutton')) {
-		    //	var text = dataToCSV(csvArray);
-                    //   	document.getElementById('whatsappbutton').innerHTML = '<button data-theme="c" style="background:#25d366 !important" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'whatsapp://send/?text='+encodeURIComponent(emailbody)+'\" tabindex="26">Whatsapp List</button>';
-                    //}
+		alert_empty(document.getElementById('whatsappbutton'));
+		    if(document.getElementById('whatsappbutton')) {
+		    	var text = dataToCSV(csvArray);
+                       	document.getElementById('whatsappbutton').innerHTML = '<button data-theme="c" style="background:#25d366 !important" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'whatsapp://send/?text='+encodeURIComponent(text)+'\" tabindex="13">Whatsapp List</button>';
+                    }
 //					if(document.getElementById('csvbutton')) {
 //						csvLink(csvArray);	
 //					}
@@ -633,7 +634,7 @@ function emailLink(emailarray,csvarray,iPhone){
 	}
 //	var test = encodeURIComponent(createEmailTable(emailarray));
 	//updateStatus("emailArray: "+emailarray,0);
-	document.getElementById('emailbutton').innerHTML = '<button data-theme="c" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'mailto:?subject=Ski%20radius%20calculator%20list%20from%20'+createEmailDate()+'&body='+encodeURIComponent(emailbody)+'\'\" tabindex="26">Email List</button>';
+	document.getElementById('emailbutton').innerHTML = '<button data-theme="c" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'mailto:?subject=Ski%20radius%20calculator%20list%20from%20'+createEmailDate()+'&body='+encodeURIComponent(emailbody)+'\'\" tabindex="13">Email List</button>';
 }
 function ResetCalc() {
 //        $('#bib').val = "";
