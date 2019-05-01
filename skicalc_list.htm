@@ -74,6 +74,20 @@
             </div>
             <div class="footerbar"></div>
         </div>
+	<div data-role="popup" id="alert" data-history="false" data-position-to="window" data-theme="b" data-overlay-theme="c" style="max-width:400px;">
+            <div data-theme="b" data-role="header" role="banner">
+                <h1>Attention</h1>
+            </div>
+            <div data-theme="a" class="ui-content" role="main">
+                <p id="alerttext"></p>
+                <a class="ui-btn ui-corner-all ui-shadow ui-btn-icon-right" data-rel="back" data-inline="true">Ok</a>
+            </div>
+        </div>
+        <div data-role="popup" id="alertauto" data-history="false" data-position-to="window" data-theme="b" data-overlay-theme="c" style="max-width:400px;">
+            <div data-theme="a" class="ui-content" role="main">
+                <p id="alerttextauto"></p>
+            </div>
+</div>
         <script type="text/javascript" src="scripts/mobile_offline.js"></script>
         <script type="text/javascript" src="scripts/mobile_skicalc.js"></script>
     </div>
