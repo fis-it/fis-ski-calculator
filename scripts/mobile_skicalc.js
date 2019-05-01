@@ -431,9 +431,7 @@ function queryAndUpdateOverview(){
 		
 		    if(document.getElementById('whatsappbutton')) {
 		    	var text = dataToCSV(csvArray);
-			//var text = "test";
-			//alert_empty(text);
-                       	document.getElementById('whatsappbutton').innerHTML = '<button style="background:#25d366 !important; border: none;" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'whatsapp://send/?text='+encodeURIComponent(text)+'\'\" tabindex="13">Whatsapp List</button>';
+                       	document.getElementById('whatsappbutton').innerHTML = '<button style="background:#25d366 !important; border: 1px solid #128c7e;" type="button"  class="ui-btn ui-btn-c ui-shadow ui-corner-all" onclick="parent.location=\'whatsapp://send/?text='+encodeURIComponent(text)+'\'\" tabindex="13">Whatsapp List</button>';
                     }
 //					if(document.getElementById('csvbutton')) {
 //						csvLink(csvArray);	
