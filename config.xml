@@ -17,7 +17,7 @@ FIS IT department
 <preference name="stay-in-webview" value="no" />
 <preference name="show-splash-screen-spinner" value="true" />
 <preference name="android-minSdkVersion" value="11" />
-<preference name="android-targetSdkVersion" value="26" />
+<preference name="android-targetSdkVersion" value="28" />
 <gap:splash src="splash/Skiradius_splash_200x320.png" />
 <gap:splash src="splash/Skiradius_splash_200x320.png" gap:platform="android" gap:density="ldpi" />
 <gap:splash src="splash/Skiradius_splash_320x480.png" gap:platform="android" gap:density="mdpi" />
